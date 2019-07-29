@@ -10,7 +10,7 @@ def nyc_pigeon_organizer(data)
             hash_by_name[name][category] << attribute.to_s
           else
             hash_by_name[name][category] = []
-            hash_by_name[name][category] << attribute
+            hash_by_name[name][category] << attribute.to_s
           end
 
           #binding.pry
