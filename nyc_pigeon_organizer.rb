@@ -16,7 +16,7 @@ def nyc_pigeon_organizer(data)
           #binding.pry
         else
           hash_by_name[name] = {}
-          ash_by_name[name] >> category
+          hash_by_name[name] >> category
           hash_by_name[name][category] = attribute.to_s
           #binding.pry
         end
