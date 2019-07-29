@@ -4,9 +4,15 @@ def nyc_pigeon_organizer(data)
   data.each do | category, hash |
     hash.each do |attribute, names|
       names.each do |name|
-        binding.pry
+        #binding.pry
         if hash_by_name.has_key?(name)
-          hash_by_name[name][category] >> attribute.to_s
+          if hash_by_name[name].has_key?(category)
+            hash_by_name[name][category] >> attribute.to_s
+          else
+            hash_by_name[name] >> category
+            hash_by_name[name][category] = [attribute]
+          end
+          
           #binding.pry
         else
           hash_by_name[name][category] = attribute.to_s
